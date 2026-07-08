@@ -1,65 +1,140 @@
-import Image from "next/image";
+import { Navbar } from '@/components/navbar'
+import { Hero } from '@/components/hero'
+import { TourPackages } from '@/components/tour-packages'
+import { Destinations } from '@/components/destinations'
+import { CabServices } from '@/components/cab-services'
+import { WhyChooseUs } from '@/components/why-choose-us'
+import { Testimonials } from '@/components/testimonials'
+import { CtaBanner } from '@/components/cta-banner'
+import { Footer } from '@/components/footer'
 
-export default function Home() {
+export default function Page() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.js file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+    <>
+      <Navbar />
+      <main>
+        <Hero />
+        <TourPackages />
+        <Destinations />
+        <CabServices />
+        <WhyChooseUs />
+        <Testimonials />
+        <CtaBanner />
       </main>
-    </div>
-  );
+      <Footer />
+    </>
+  )
 }
+
+
+
+
+
+
+
+
+
+
+
+// import Link from 'next/link';
+// import { Hotel, UtensilsCrossed, Bus, ShieldCheck } from 'lucide-react';
+// import PackageCard from '@/components/PackageCard';
+// import ElevationPath from '@/components/ElevationPath';
+// import { packages } from '@/data/packages';
+
+// const featured = packages.slice(0, 3);
+
+// const whyUs = [
+//   { icon: Hotel, title: 'Hotels sorted', desc: 'Vetted stays booked at every stop, from base towns to shrine dormitories.' },
+//   { icon: UtensilsCrossed, title: 'Food included', desc: 'Breakfast and dinner covered on every package — no surprise bills.' },
+//   { icon: Bus, title: 'Travel handled', desc: 'AC vehicles for the full circuit, drivers who know these mountain roads.' },
+//   { icon: ShieldCheck, title: 'On-ground support', desc: 'A tour manager reachable throughout your yatra, not just at booking.' },
+// ];
+
+// const sampleItinerary = packages[0].itinerary.slice(0, 3);
+
+// export default function Home() {
+//   return (
+//     <div>
+//       {/* Hero */}
+//       <section className="bg-ink text-snow">
+//         <div className="max-w-6xl mx-auto px-5 py-20 md:py-28 grid md:grid-cols-2 gap-12 items-center">
+//           <div>
+//             <p className="font-mono text-marigold text-xs tracking-widest mb-4">HARIDWAR · KEDARNATH · BADRINATH · MUSSOORIE</p>
+//             <h1 className="font-display text-4xl md:text-5xl leading-tight">
+//               Every step of the yatra, <span className="text-marigold">planned before you take it.</span>
+//             </h1>
+//             <p className="text-stone mt-5 max-w-md">
+//               Kitevista Holidays runs fixed-departure pilgrimage and hill-station
+//               packages across Uttarakhand — hotels, food and travel bundled into
+//               one price, by day count.
+//             </p>
+//             <div className="flex gap-4 mt-8">
+//               <Link href="/packages" className="bg-marigold text-ink px-6 py-3 rounded-full font-medium hover:brightness-95 transition">
+//                 View Packages
+//               </Link>
+//               <Link href="/contact" className="border border-white/20 px-6 py-3 rounded-full font-medium hover:bg-white/5 transition">
+//                 Talk to Us
+//               </Link>
+//             </div>
+//           </div>
+
+//           <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+//             <p className="font-mono text-xs text-marigold mb-4">SAMPLE ROUTE — KEDARNATH YATRA</p>
+//             <div className="[&_h4]:text-snow [&_p]:text-stone">
+//               <ElevationPath itinerary={sampleItinerary} />
+//             </div>
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* Why us */}
+//       <section className="max-w-6xl mx-auto px-5 py-20">
+//         <h2 className="font-display text-3xl text-center mb-2">What's Included, Always</h2>
+//         <p className="text-stone text-center max-w-xl mx-auto mb-12">
+//           Every package is built the same way — clear on hotels, food, travel and support, so you know exactly what you're paying for.
+//         </p>
+//         <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
+//           {whyUs.map(({ icon: Icon, title, desc }) => (
+//             <div key={title} className="bg-white rounded-2xl p-6 border border-black/5">
+//               <Icon className="text-marigold mb-3" size={28} />
+//               <h3 className="font-display text-lg">{title}</h3>
+//               <p className="text-stone text-sm mt-2">{desc}</p>
+//             </div>
+//           ))}
+//         </div>
+//       </section>
+
+//       {/* Featured packages */}
+//       <section className="bg-white py-20">
+//         <div className="max-w-6xl mx-auto px-5">
+//           <div className="flex items-end justify-between mb-10">
+//             <div>
+//               <h2 className="font-display text-3xl">Popular Packages</h2>
+//               <p className="text-stone mt-2">Fixed itineraries, priced per person.</p>
+//             </div>
+//             <Link href="/packages" className="text-marigold font-medium hover:underline hidden sm:block">
+//               View all →
+//             </Link>
+//           </div>
+//           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+//             {featured.map((pkg) => (
+//               <PackageCard key={pkg.slug} pkg={pkg} />
+//             ))}
+//           </div>
+//         </div>
+//       </section>
+
+//       {/* CTA */}
+//       <section className="max-w-6xl mx-auto px-5 py-20 text-center">
+//         <h2 className="font-display text-3xl mb-4">Not sure which yatra fits your dates?</h2>
+//         <p className="text-stone max-w-lg mx-auto mb-8">
+//           Tell us your group size, budget and travel window — we'll put together a package that fits.
+//         </p>
+//         <Link href="/contact" className="bg-marigold text-ink px-8 py-3 rounded-full font-medium hover:brightness-95 transition">
+//           Get a Custom Plan
+//         </Link>
+//       </section>
+//     </div>
+//   );
+// }
