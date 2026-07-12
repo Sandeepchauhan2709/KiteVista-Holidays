@@ -89,7 +89,7 @@ export function CabServices() {
           </div>
 
           <Link
-            href="#contact"
+            href="/cab-services"
             className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-base font-semibold text-primary-foreground transition-opacity hover:opacity-90"
           >
             Book a Cab Now

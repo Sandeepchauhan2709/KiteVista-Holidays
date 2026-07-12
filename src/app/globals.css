@@ -178,6 +178,22 @@
   animation: hero-progress 7s linear forwards;
 }
 
+/* ---------- Scroll reveal ---------- */
+
+.reveal-base {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 @media (prefers-reduced-motion: reduce) {
   .animate-kenburns,
   .animate-hero-rise,
@@ -187,5 +203,10 @@
     animation: none;
     opacity: 1;
     transform: none;
+  }
+  .reveal-base {
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
 }
