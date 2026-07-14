@@ -5,11 +5,11 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { ArrowRight, ChevronDown, Star } from 'lucide-react'
 
-import img from '@/public/images/badrinath.png'
-import img2 from '@/public/images/kedarnath.png'
-import img3 from '@/public/images/hero-kedarnath.png'
-import img4 from '@/public/images/rishikesh.png'
-import img5 from '@/public/images/rishikesh.png'
+import img from '@/public/images/Kedarnath.jpeg'
+import img2 from '@/public/images/Badrinath.jpeg'
+import img3 from '@/public/images/Chardham yatra.jpeg'
+import img4 from '@/public/images/Do Dham(kedarnath-Badrinath).jpeg'
+import img5 from '@/public/images/Rishikesh tour.jpeg'
 
 const SLIDE_DURATION = 7000
 
@@ -17,7 +17,7 @@ const slides = [
   {
     id:1,
     // image: '/images/hero-kedarnath.png',
-    image: img2,
+    image: img,
     alt: 'Kedarnath temple with snow-capped Himalayan peaks at golden hour',
     destination: 'Kedarnath',
     tagline: 'Walk the sacred path to the abode of Lord Shiva',
@@ -25,7 +25,7 @@ const slides = [
   {
     id:2,
     // image: '/images/badrinath.png',
-    image: img,
+    image: img2,
     alt: 'Badrinath temple with Neelkanth peak behind it',
     destination: 'Badrinath',
     tagline: 'Seek blessings in the valley of the gods',
@@ -42,8 +42,8 @@ const slides = [
     id:4,
     // image: '/images/manali.png',
     image: img4,
-    alt: 'Lush green Manali valley with snow-capped peaks',
-    destination: 'Manali',
+    alt: 'The Do Dham Yatra covers the two most revered shrines of Uttarakhand — Kedarnath and Badrinath — in one seamless 6-day circuit from Haridwar. Ideal for pilgrims with limited time who want a complete, well-organised darshan experience.',
+    destination: 'Do Dham Yatra',
     tagline: 'Breathe in the magic of the mountains',
   },
   {

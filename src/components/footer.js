@@ -11,39 +11,40 @@ function InstagramIcon({ className }) {
   )
 }
 
-function FacebookIcon({ className }) {
-  return (
-    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-    </svg>
-  )
-}
+// function FacebookIcon({ className }) {
+//   return (
+//     <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+//       <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+//     </svg>
+//   )
+// }
 
-function YoutubeIcon({ className }) {
-  return (
-    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-      <path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17" />
-      <path d="m10 15 5-3-5-3z" />
-    </svg>
-  )
-}
+// function YoutubeIcon({ className }) {
+//   return (
+//     <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+//       <path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17" />
+//       <path d="m10 15 5-3-5-3z" />
+//     </svg>
+//   )
+// }
 
 const quickLinks = [
   { label: 'Home', href: '/' },
-  { label: 'Tour Packages', href: '#packages' },
-  { label: 'Destinations', href: '#destinations' },
-  { label: 'Cab Services', href: '#cabs' },
-  { label: 'About Us', href: '#about' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Tour Packages', href: '/packages' },
+  { label: 'Destinations', href: '/destinations' },
+  { label: 'Cab Services', href: '/cab-services' },
+  { label: 'About Us', href: '/about' },
+  { label: 'Contact', href: '/contact' },
+  { label: 'Policies', href: '/policies' },
 ]
 
 const popularTours = [
-  'Chardham Yatra Package',
-  'Kedarnath Tour Package',
-  'Do Dham Yatra',
-  'Badrinath Tour Package',
-  'Manali Volvo Package',
-  'Kedarnath Helicopter Booking',
+  { label: 'Chardham Yatra Package', href: '/packages/chardham-yatra-package' },
+  { label: 'Kedarnath Tour Package', href: '/packages/kedarnath-tour-package' },
+  { label: 'Do Dham Yatra', href: '/packages/do-dham-yatra' },
+  { label: 'Badrinath Tour Package', href: '/packages/badrinath-tour-package' },
+  { label: 'Manali Holiday Package', href: '/packages/manali-holiday-package' },
+  { label: 'Rishikesh Haridwar Getaway', href: '/packages/rishikesh-haridwar' },
 ]
 
 export function Footer() {
@@ -65,13 +66,13 @@ export function Footer() {
             </p>
             <div className="mt-5 flex gap-3">
               <a
-                href="#"
+                href="https://instagram.com/kitevista_holidays"
                 className="flex size-9 items-center justify-center rounded-full bg-primary-foreground/10 transition-colors hover:bg-accent hover:text-accent-foreground"
               >
                 <InstagramIcon className="size-4" />
                 <span className="sr-only">Instagram</span>
               </a>
-              <a
+              {/* <a
                 href="#"
                 className="flex size-9 items-center justify-center rounded-full bg-primary-foreground/10 transition-colors hover:bg-accent hover:text-accent-foreground"
               >
@@ -84,7 +85,7 @@ export function Footer() {
               >
                 <YoutubeIcon className="size-4" />
                 <span className="sr-only">YouTube</span>
-              </a>
+              </a> */}
             </div>
           </div>
 
@@ -110,12 +111,12 @@ export function Footer() {
             <h3 className="font-serif text-lg font-semibold">Popular Tours</h3>
             <ul className="mt-4 flex flex-col gap-2.5">
               {popularTours.map((tour) => (
-                <li key={tour}>
+                <li key={tour.label}>
                   <Link
-                    href="#packages"
+                    href={tour.href}
                     className="text-sm text-primary-foreground/75 transition-colors hover:text-accent"
                   >
-                    {tour}
+                    {tour.label}
                   </Link>
                 </li>
               ))}
@@ -129,15 +130,15 @@ export function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin className="mt-0.5 size-4 shrink-0 text-accent" aria-hidden="true" />
                 <span>
-                  Near ISBT, Haridwar Road,
+                  Near Mr Perfection Automotive, HIG Flats,
                   <br />
-                  Dehradun, Uttarakhand 248001
+                  Chander Nagar, Surya Nagar, Ghaziabad, Uttar Pradesh 20101
                 </span>
               </li>
               <li>
-                <a href="tel:+918630731034" className="flex items-center gap-3 transition-colors hover:text-accent">
+                <a href="tel:+91-8178116225" className="flex items-center gap-3 transition-colors hover:text-accent">
                   <Phone className="size-4 shrink-0 text-accent" aria-hidden="true" />
-                  +91 86307 31034
+                  +91 81781 16225
                 </a>
               </li>
               <li>
@@ -146,7 +147,7 @@ export function Footer() {
                   className="flex items-center gap-3 transition-colors hover:text-accent"
                 >
                   <Mail className="size-4 shrink-0 text-accent" aria-hidden="true" />
-                  info@kitevista.com
+                  Hr@info.kitevistaholiday.com
                 </a>
               </li>
             </ul>
@@ -156,10 +157,10 @@ export function Footer() {
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-primary-foreground/15 pt-6 text-sm text-primary-foreground/60 md:flex-row">
           <p>&copy; {new Date().getFullYear()} KiteVista Holidays. All rights reserved.</p>
           <div className="flex gap-6">
-            <Link href="#" className="transition-colors hover:text-accent">
+            <Link href="/policies" className="transition-colors hover:text-accent">
               Privacy Policy
             </Link>
-            <Link href="#" className="transition-colors hover:text-accent">
+            <Link href="/policies" className="transition-colors hover:text-accent">
               Terms & Conditions
             </Link>
           </div>
@@ -168,61 +169,3 @@ export function Footer() {
     </footer>
   )
 }
-
-
-
-
-
-
-
-
-// import Link from 'next/link';
-// import { Mountain, Phone, Mail, MapPin } from 'lucide-react';
-
-// export default function Footer() {
-//   return (
-//     <footer className="bg-ink text-snow mt-24">
-//       <div className="max-w-6xl mx-auto px-5 py-14 grid gap-10 md:grid-cols-4">
-//         <div>
-//           <div className="flex items-center gap-2 font-display text-lg mb-3">
-//             <Mountain size={20} className="text-marigold" />
-//             Kitevista Holidays
-//           </div>
-//           <p className="text-stone text-sm leading-relaxed">
-//             Guided pilgrimage and hill-station journeys across the Himalayas,
-//             planned down to the last night's stay.
-//           </p>
-//         </div>
-
-//         <div>
-//           <h4 className="font-display text-marigold mb-3">Packages</h4>
-//           <ul className="space-y-2 text-sm text-stone">
-//             <li><Link href="/packages/kedarnath-yatra" className="hover:text-snow">Kedarnath Yatra</Link></li>
-//             <li><Link href="/packages/char-dham-yatra" className="hover:text-snow">Char Dham Yatra</Link></li>
-//             <li><Link href="/packages/badrinath-yatra" className="hover:text-snow">Badrinath Yatra</Link></li>
-//             <li><Link href="/packages/mussoorie-getaway" className="hover:text-snow">Mussoorie Getaway</Link></li>
-//           </ul>
-//         </div>
-
-//         <div>
-//           <h4 className="font-display text-marigold mb-3">Company</h4>
-//           <ul className="space-y-2 text-sm text-stone">
-//             <li><Link href="/about" className="hover:text-snow">About Us</Link></li>
-//             <li><Link href="/contact" className="hover:text-snow">Contact</Link></li>
-//             <li><Link href="/packages" className="hover:text-snow">All Packages</Link></li>
-//           </ul>
-//         </div>
-
-//         <div className="text-sm text-stone space-y-3">
-//           <p className="flex items-center gap-2"><Phone size={16} className="text-marigold" /> +91 98765 43210</p>
-//           <p className="flex items-center gap-2"><Mail size={16} className="text-marigold" /> hello@kitevistaholidays.com</p>
-//           <p className="flex items-center gap-2"><MapPin size={16} className="text-marigold" /> Haridwar, Uttarakhand, India</p>
-//         </div>
-//       </div>
-
-//       <div className="border-t border-white/10 text-center text-xs text-stone py-5">
-//         © {new Date().getFullYear()} Kitevista Holidays. All rights reserved.
-//       </div>
-//     </footer>
-//   );
-// }

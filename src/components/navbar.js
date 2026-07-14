@@ -1,9 +1,12 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Menu, Mountain, Phone, X } from 'lucide-react'
+import { Menu, Phone, X } from 'lucide-react'
+
+import img from '@/public/images/logo.png'
 
 const navLinks = [
   { label: 'Home', href: '/' },
@@ -12,6 +15,7 @@ const navLinks = [
   { label: 'Cab Services', href: '/cab-services' },
   { label: 'About', href: '/about' },
   { label: 'Contact', href: '/contact' },
+  // { label: 'Policies', href: '/policies' },
 ]
 
 export function Navbar() {
@@ -44,21 +48,15 @@ export function Navbar() {
         className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 md:h-20 md:px-6"
         aria-label="Main navigation"
       >
-        <Link href="/" className="flex items-center gap-2">
-          <span
-            className={`flex size-9 items-center justify-center rounded-full ${
-              solid ? 'bg-primary text-primary-foreground' : 'bg-primary-foreground/15 text-primary-foreground'
-            }`}
-          >
-            <Mountain className="size-5" aria-hidden="true" />
-          </span>
-          <span
-            className={`font-serif text-lg font-bold leading-tight md:text-xl ${
-              solid ? 'text-foreground' : 'text-primary-foreground'
-            }`}
-          >
-            Himalayan Yatra
-          </span>
+        <Link href="/" className="flex items-center">
+          <Image
+            src={img}
+            alt="KiteVista Holidays"
+            width={140}
+            height={50}
+            priority
+            className="h-12 w-auto object-contain md:h-16"
+          />
         </Link>
 
         {/* Desktop links */}
@@ -90,13 +88,13 @@ export function Navbar() {
 
         <div className="hidden items-center gap-3 lg:flex">
           <a
-            href="tel:+918630731034"
+            href="tel:+918178116225"
             className={`flex items-center gap-2 text-sm font-semibold transition-colors hover:text-accent ${
               solid ? 'text-foreground' : 'text-primary-foreground'
             }`}
           >
             <Phone className="size-4" aria-hidden="true" />
-            +91 86307 31034
+            +91 81781 16225
           </a>
           <Link
             href="/packages"
@@ -145,9 +143,9 @@ export function Navbar() {
             })}
           </ul>
           <div className="mt-4 flex flex-col gap-3 px-3">
-            <a href="tel:+918630731034" className="flex items-center gap-2 text-sm font-semibold text-foreground">
+            <a href="tel:+918178116225" className="flex items-center gap-2 text-sm font-semibold text-foreground">
               <Phone className="size-4" aria-hidden="true" />
-              +91 86307 31034
+              +91 81781 16225
             </a>
             <Link
               href="/packages"

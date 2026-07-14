@@ -32,11 +32,11 @@ export function CtaBanner() {
               <ArrowRight className="size-4" aria-hidden="true" />
             </Link>
             <a
-              href="tel:+918630731034"
+              href="tel:+91-8178116225"
               className="inline-flex items-center justify-center gap-2 rounded-full border border-primary-foreground/40 bg-primary-foreground/10 px-7 py-3.5 text-base font-semibold text-primary-foreground backdrop-blur-sm transition-colors hover:bg-primary-foreground/20"
             >
               <Phone className="size-4" aria-hidden="true" />
-              +91 86307 31034
+              +91 81781 16225
             </a>
           </div>
         </div>

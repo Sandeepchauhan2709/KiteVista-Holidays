@@ -5,6 +5,8 @@ import { PageHeader } from '@/components/page-header'
 import { Reveal } from '@/components/reveal'
 import { CtaBanner } from '@/components/cta-banner'
 
+import img from '@/public/images/rishikesh.png'
+
 export const metadata = {
   title: 'About Us | Himalayan Yatra',
   description:
@@ -51,7 +53,7 @@ export default function AboutPage() {
       <PageHeader
         eyebrow="About Us"
         title="A Local Team That Knows Every Turn of the Hills"
-        description="Himalayan Yatra is a Dehradun-based tour and travel company helping pilgrims and explorers experience the Himalayas safely, comfortably and affordably."
+        description="KiteVista is a Dehradun-based tour and travel company helping pilgrims and explorers experience the Himalayas safely, comfortably and affordably."
         image="/images/hero-kedarnath.png"
         imageAlt="Kedarnath temple against dramatic Himalayan peaks"
       />
@@ -62,7 +64,7 @@ export default function AboutPage() {
           <Reveal>
             <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
               <Image
-                src="/images/chardham.png"
+                src={img}
                 alt="Gangotri temple beside a glacial Himalayan river"
                 fill
                 className="object-cover"

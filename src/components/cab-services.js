@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { ArrowRight, Car, ShieldCheck, UserCheck, Wallet } from 'lucide-react'
 
-import img from '@/public/images/chardham.png'
+import img from '@/public/images/Cab-ki-photo.jpeg'
 
 const cabFeatures = [
   {

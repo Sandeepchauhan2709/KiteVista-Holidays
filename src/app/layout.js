@@ -15,7 +15,7 @@ const playfair = Playfair_Display({
 })
 
 export const metadata = {
-  title: 'Himalayan Yatra Travels | Chardham, Kedarnath & Manali Tour Packages',
+  title: 'KiteVista Holidays | Best Tour & Travel Agency in Delhi NCR',
   description:
     'Trusted tour & travel agency for Chardham Yatra, Kedarnath, Badrinath, Manali and more. Curated Himalayan tour packages with reliable cab services across Uttarakhand and Himachal.',
   generator: 'v0.app',
