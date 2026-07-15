@@ -2,10 +2,11 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { ArrowUpRight } from 'lucide-react'
 
+// import img from '@/public/images/kedarnath.jpeg'
 import img from '@/public/images/kedarnath.png'
-import img2 from '@/public/images/badrinath.png'
-import img3 from '@/public/images/manali.png'
-import img4 from '@/public/images/rishikesh.png'
+import img2 from '@/public/images/Badrinath.jpeg'
+import img3 from '@/public/images/Mussoorie.jpeg'
+import img4 from '@/public/images/Rishikesh tour.jpeg'
 
 const destinations = [
   {
