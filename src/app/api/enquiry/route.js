@@ -1,8 +1,5 @@
 import { Resend } from 'resend'
-
-const RESEND_API_KEY = 're_3yzvMhto_CySM2GTeZiWpkXtvYEjArNNc'
-const ENQUIRY_FROM_EMAIL = 'sandeepchauhan2709@gmail.com'
-const ENQUIRY_TO_EMAIL = 'sandeepchauhan2709@gmail.com'
+// const RESEND_API_KEY = re_gqyGkhd1_7u53UkLuu12i9uAyzX1nXZY3
 
 export async function POST(request) {
   try {
@@ -34,20 +31,22 @@ export async function POST(request) {
     const safeMessage = sanitize(message) || 'No message provided'
     const safeSubject = sanitize(subject) || 'General Enquiry'
 
-    if (!process.env.RESEND_API_KEY || !process.env.ENQUIRY_TO_EMAIL || !RESEND_API_KEY) {
-      console.log('[v0] Missing RESEND_API_KEY or ENQUIRY_TO_EMAIL environment variable')
-      return Response.json(
-        { error: 'Enquiry service is not configured yet. Please call us directly.' },
-        { status: 500 }
-      )
-    }
+    // if (!process.env.RESEND_API_KEY || !process.env.ENQUIRY_TO_EMAIL) {
+    // if (!RESEND_API_KEY || !process.env.ENQUIRY_TO_EMAIL) {
+    //   console.log('[v0] Missing RESEND_API_KEY or ENQUIRY_TO_EMAIL environment variable')
+    //   return Response.json(
+    //     { error: 'Enquiry service is not configured yet. Please call us directly.' },
+    //     { status: 500 }
+    //   )
+    // }
 
-    const resend = new Resend(process.env.RESEND_API_KEY)
+    // const resend = new Resend(process.env.RESEND_API_KEY)
+    const resend = new Resend('re_gqyGkhd1_7u53UkLuu12i9uAyzX1nXZY3')
 
     const { error } = await resend.emails.send({
       // Use your verified domain sender once set up, e.g. 'Himalayan Yatra <enquiry@yourdomain.com>'
-      from: ENQUIRY_FROM_EMAIL || 'Kitevista Holidays <onboarding@resend.dev>',
-      to: ENQUIRY_TO_EMAIL,
+      from:  'Hr@info.kitevistaholidays.com',
+      to:  'Hr@info.kitevistaholidays.com',
       replyTo: safeEmail,
       subject: `New Enquiry: ${safeSubject} — ${safeName}`,
       html: `
@@ -107,6 +106,7 @@ export async function POST(request) {
 
     return Response.json({ success: true })
   } catch (err) {
+    console.log("erro hia ya ",err)
     console.log('[v0] Enquiry API error:', err.message)
     return Response.json({ error: 'Something went wrong. Please try again.' }, { status: 500 })
   }
