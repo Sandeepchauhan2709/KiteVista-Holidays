@@ -31,17 +31,17 @@ export async function POST(request) {
     const safeMessage = sanitize(message) || 'No message provided'
     const safeSubject = sanitize(subject) || 'General Enquiry'
 
-    // if (!process.env.RESEND_API_KEY || !process.env.ENQUIRY_TO_EMAIL) {
+    if (!process.env.RESEND_API_KEY || !process.env.ENQUIRY_TO_EMAIL) {
     // if (!RESEND_API_KEY || !process.env.ENQUIRY_TO_EMAIL) {
-    //   console.log('[v0] Missing RESEND_API_KEY or ENQUIRY_TO_EMAIL environment variable')
-    //   return Response.json(
-    //     { error: 'Enquiry service is not configured yet. Please call us directly.' },
-    //     { status: 500 }
-    //   )
-    // }
+      console.log('[v0] Missing RESEND_API_KEY or ENQUIRY_TO_EMAIL environment variable')
+      return Response.json(
+        { error: 'Enquiry service is not configured yet. Please call us directly.' },
+        { status: 500 }
+      )
+    }
 
-    // const resend = new Resend(process.env.RESEND_API_KEY)
-    const resend = new Resend('re_W5aQARxK_GDrzF2yiLRf1q2tcvPSm4Jdy')
+    const resend = new Resend(process.env.RESEND_API_KEY )
+    // const resend = new Resend('re_aJW8CbBP_H9aog5hounraKspNtvjXVZWK')
 
     const { error } = await resend.emails.send({
       // Use your verified domain sender once set up, e.g. 'Himalayan Yatra <enquiry@yourdomain.com>'
