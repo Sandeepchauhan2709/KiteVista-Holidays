@@ -15,7 +15,7 @@ export async function generateMetadata({ params }) {
   const pkg = getPackageBySlug(slug)
   if (!pkg) return { title: 'Package Not Found' }
   return {
-    title: `${pkg.title} | Himalayan Yatra`,
+    title: `${pkg.title} | Kitevista Holidays`,
     description: pkg.overview.slice(0, 155),
   }
 }

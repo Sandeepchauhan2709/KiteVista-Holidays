@@ -132,7 +132,7 @@ export function Footer() {
                 <span>
                   Near Mr Perfection Automotive, HIG Flats,
                   <br />
-                  Chander Nagar, Surya Nagar, Ghaziabad, Uttar Pradesh 20101
+                  Chander Nagar, Surya Nagar, Ghaziabad, Uttar Pradesh 201011
                 </span>
               </li>
               <li>

@@ -6,7 +6,7 @@ import { Reveal } from '@/components/reveal'
 import { EnquiryForm } from '@/components/enquiry-form'
 
 export const metadata = {
-  title: 'Cab Services | Himalayan Yatra',
+  title: 'Cab Services | Kitevista Holidays',
   description:
     'Reliable taxi and cab services across Uttarakhand and Himachal — sedans, SUVs and tempo travellers with experienced hill drivers, transparent fares and 24/7 support.',
 }

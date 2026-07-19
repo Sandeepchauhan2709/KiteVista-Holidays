@@ -7,7 +7,7 @@ import { Reveal } from '@/components/reveal'
 import { CtaBanner } from '@/components/cta-banner'
 
 export const metadata = {
-  title: 'Tour Packages | Himalayan Yatra',
+  title: 'Tour Packages | Kitevista Holidays',
   description:
     'Explore our handcrafted Chardham Yatra, Kedarnath, Badrinath, Manali and Rishikesh tour packages with transparent pricing, comfortable hotels and expert hill drivers.',
 }

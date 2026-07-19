@@ -5,9 +5,9 @@ import { Reveal } from '@/components/reveal'
 import { EnquiryForm } from '@/components/enquiry-form'
 
 export const metadata = {
-  title: 'Contact Us | Himalayan Yatra',
+  title: 'Contact Us | Kitevista Holidays',
   description:
-    'Get in touch with Himalayan Yatra for tour bookings, cab services and travel enquiries. Call, WhatsApp or send us a message — we respond within a few hours.',
+    'Get in touch with Kitevista Holidays for tour bookings, cab services and travel enquiries. Call, WhatsApp or send us a message — we respond within a few hours.',
 }
 
 const contactDetails = [

@@ -8,9 +8,9 @@ import { CtaBanner } from '@/components/cta-banner'
 import img from '@/public/images/rishikesh.png'
 
 export const metadata = {
-  title: 'About Us | Himalayan Yatra',
+  title: 'About Us | Kitevista Holidays',
   description:
-    'Himalayan Yatra is a trusted tour and travel agency from Dehradun specializing in Chardham Yatra, Kedarnath, Badrinath, Manali tours and reliable cab services across the Himalayas.',
+    'Kitevista Holidays is a trusted tour and travel agency from Dehradun specializing in Chardham Yatra, Kedarnath, Badrinath, Manali tours and reliable cab services across the Himalayas.',
 }
 
 const stats = [

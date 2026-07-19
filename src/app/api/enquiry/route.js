@@ -41,7 +41,7 @@ export async function POST(request) {
     // }
 
     // const resend = new Resend(process.env.RESEND_API_KEY)
-    const resend = new Resend('re_gqyGkhd1_7u53UkLuu12i9uAyzX1nXZY3')
+    const resend = new Resend('re_W5aQARxK_GDrzF2yiLRf1q2tcvPSm4Jdy')
 
     const { error } = await resend.emails.send({
       // Use your verified domain sender once set up, e.g. 'Himalayan Yatra <enquiry@yourdomain.com>'
@@ -89,7 +89,7 @@ export async function POST(request) {
           </div>
           <div style="background-color: #f7f7f5; padding: 16px 24px;">
             <p style="color: #999; font-size: 12px; margin: 0;">
-              Sent from the Himalayan Yatra website enquiry form.
+              Sent from the KiteVista Holidays website enquiry form.
             </p>
           </div>
         </div>

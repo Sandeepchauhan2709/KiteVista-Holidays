@@ -11,7 +11,7 @@ export const siteInfo = {
   phoneHref: 'tel:+91-8178116225',
   whatsappHref: 'https://wa.me/91-8178116225',
   email: 'Hr@info.kitevistaholiday.com',
-  address: 'Near Mr Perfection Automotive, HIG Flats, Chander Nagar, Surya Nagar, Ghaziabad, Uttar Pradesh 20101',
+  address: 'Near Mr Perfection Automotive, HIG Flats, Chander Nagar, Surya Nagar, Ghaziabad, Uttar Pradesh 201011',
 }
 
 export const packages = [
@@ -263,21 +263,21 @@ export const cabFleet = [
     name: 'Sedan (Dzire / Etios)',
     seats: '4 Seater',
     idealFor: 'Couples and small families',
-    rate: '₹11 / km',
+    rate: '₹18 / km',
     features: ['AC', 'Music system', 'Clean interiors', 'Verified driver'],
   },
   {
     name: 'SUV (Innova / Ertiga)',
     seats: '6-7 Seater',
     idealFor: 'Families and small groups',
-    rate: '₹15 / km',
+    rate: '₹28/22 / km',
     features: ['AC', 'Ample luggage space', 'Comfortable for hills', 'Experienced hill driver'],
   },
   {
     name: 'Tempo Traveller',
     seats: '12-17 Seater',
     idealFor: 'Large groups and yatra parties',
-    rate: '₹22 / km',
+    rate: '₹32 / km',
     features: ['Push-back seats', 'AC', 'LCD screen', 'Group luggage capacity'],
   },
 ]

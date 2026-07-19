@@ -10,7 +10,7 @@ import img from '@/public/images/rishikesh.png'
 import img2 from '@/public/images/wedding-destination.jpeg'
 
 export const metadata = {
-  title: 'Destinations | Himalayan Yatra',
+  title: 'Destinations | Kitevista Holidays',
   description:
     'Discover the most loved Himalayan destinations — Kedarnath, Badrinath, Manali, Rishikesh, Haridwar and the complete Chardham circuit.',
 }
